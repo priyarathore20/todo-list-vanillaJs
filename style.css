@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  color: wheat;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#f800ff, #090979) no-repeat;
+}
+
+header{
+  font-size: 1.5rem;  
+  text-decoration: underline;
+}
+
+header, form{
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+
+form input, form button{
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: wheat;
+}
+
+form button{
+ background-color: #090979;
+ color: white;
+ cursor: pointer;
+transition: all 0.3 ease;  
+}
+
+form button:hover{
+  background-color: white;
+  color: #f800ff;
+}
+
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list{
+  list-style: none;
+  width: 30%;
+}
+
+.todo{
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.todo li{
+  flex: 1;
+}
+.trash-btn{
+   padding: 1rem;
+   background-color: #ff0000;
+   color: white;
+   cursor: pointer;
+   border: none;
+   font-size: 1rem;
+}
+
+ .complete-btn{
+  padding: 1rem;
+  background-color:  #0f6b07;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.trash-btn:hover {
+  background-color: white;
+  color: #ff0000;
+}
+
+.complete-btn:hover{
+  background-color:white ;
+  color: #0f6b07;
+}
+
+.todo-item{
+  padding: 0.5rem 1.5rem 0rem 1.5rem;
+}
+
+.fa-trash, .fa-check{
+  pointer-events: none;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  color: #090979;
+  background-color: white;
+  width: 10rem;
+  padding: 0rem 1rem;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.select{
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #090979;
+  pointer-events: none;
+}
+
